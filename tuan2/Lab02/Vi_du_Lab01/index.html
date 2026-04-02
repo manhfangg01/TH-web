@@ -3,140 +3,111 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>BookStore</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css" />
+    <title>BookStore - Table Layout</title>
+    <style type="text/css">
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .main-table { width: 1000px; margin: 0 auto; background-color: #ffffff; border-collapse: collapse; }
+        
+        /* Menu styles */
+        .menu-bar { background-color: #333; color: white; height: 40px; }
+        .menu-bar a { color: white; text-decoration: none; padding: 0 15px; font-weight: bold; font-size: 13px; }
+        
+        /* Sidebar styles */
+        .sidebar { width: 200px; vertical-align: top; border: 1px solid #ddd; }
+        .title { background-color: #007bff; color: white; padding: 10px; font-weight: bold; text-align: center; }
+        .categories { list-style: none; padding: 0; margin: 0; }
+        .categories li { border-bottom: 1px solid #eee; padding: 8px 10px; }
+        .categories a { text-decoration: none; color: #333; font-size: 14px; }
+        .lmenu1 { background-color: #f9f9f9; }
+        .lmenu2 { background-color: #ffffff; }
+
+        /* Content styles */
+        .content-cell { vertical-align: top; padding: 10px; background-color: #ffffeb; }
+        
+        /* Footer */
+        .footer { background-color: #333; color: white; text-align: center; padding: 15px; }
+    </style>
 </head>
 
 <body>
-    <div id="container">
+    <table class="main-table" border="0" cellpadding="0" cellspacing="0">
+        
+        <tr>
+            <td colspan="3" id="header">
+                <a href="#">
+                    <img src="images/bookstoreBanner.jpg" alt="Banner" style="display:block;" width="1000" height="300" />
+                </a>
+            </td>
+        </tr>
 
-        <!-- Hình Banner hoặc Logo  -->
-        <div id="header">
-            <div id="banner_logo">
-                <a href="#"> <img src="images/bookstoreBanner.jpg"  alt="" style="border-radius: 10px;" width="1000px" height="300px" ></a>
-            </div>
-        </div>
+        <tr>
+            <td colspan="3" class="menu-bar">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="padding-left: 10px;">
+                            <a href="#">TRANG CHỦ</a> |
+                            <a href="#">DỊCH VỤ</a> |
+                            <a href="#">TIN KHUYẾN MÃI</a> |
+                            <a href="#">GIAO HÀNG</a> |
+                            <a href="#">ĐĂNG NHẬP</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
 
-        <!-- MENU CHÍNH  -->
-        <div id="menu">
-            <div id="menu_left_corner"></div>
+        <tr><td colspan="3" height="10"></td></tr>
 
-            <div id="menu_content">
-                <ul id="hmenu">
-                    <li>
-                        <a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a>
-                    </li>
-                    <li class="devider">&nbsp;</li>
-                    <li>
-                        <a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a>
-                    </li>
-                    <li class="devider">&nbsp;</li>
-                    <li>
-                        <a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a>
-                    </li>
-                    <li class="devider">&nbsp;</li>
-                    <li>
-                        <a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a>
-                    </li>
-                    <li class="devider">&nbsp;</li>
-                    <li>
-                        <a href="#"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div id="menu_right_corner"></div>
-            <div style="clear:both"></div>
-        </div>
-
-        <div id="path"></div>
-        <div id="main">
-
-            <!-- MENU bên trái -->
-            <div id="left">
+        <tr>
+            <td class="sidebar">
                 <div class="title">Loại sản phẩm</div>
                 <ul class="categories">
-
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Văn Học</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Kinh Tế</a>
-                    </li>
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tâm Lý</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiếu Nhi</a>
-                    </li>
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Giáo Khoa</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a>
-                    </li>
+                    <li class="lmenu1"><a href="#">Văn Học</a></li>
+                    <li class="lmenu2"><a href="#">Kinh Tế</a></li>
+                    <li class="lmenu1"><a href="#">Tâm Lý</a></li>
+                    <li class="lmenu2"><a href="#">Thiếu Nhi</a></li>
                 </ul>
-                <div class="box">
-                    <div class="title">SP Khuyến mãi</div>
-                    <div class="box_content" style="height:190px;">
-                    <!-- Chèn thẻ marquee chạy các sp khuyến mãi ở đây -->
-                        Chèn marquee chạy từ dưới lên!
-                    </div>
+                <br />
+                <div class="title">SP Khuyến mãi</div>
+                <div style="height:190px; padding:10px; text-align:center;">
+                    <marquee direction="up" scrollamount="2" height="170">
+                        Sách giảm giá 50%<br /><br />
+                        Combo giải trí hè<br /><br />
+                        Tặng mã giảm giá 20k
+                    </marquee>
                 </div>
+            </td>
 
+            <td class="content-cell">
+                <div style="border: 1px solid #ddd; min-height: 400px; padding: 15px;">
+                    <h2 align="center">Nội dung thực hành</h2>
+                    <hr />
+                    <p align="center">Chèn table theo yêu cầu ở đây!</p>
                 </div>
-        </div>
+            </td>
 
-            <!-- CONTENT hiển thị ở giữa  -->
-            <div id="content">
-                <div class="big_box" style="align-content: center;">
-                    <div class="big_box_top"></div>
-                    <div class="big_box_mid">
-                        Chèn table theo yêu cầu ở đây!
-                    </div>
-                    <div class="big_box_bot"></div>
-                </div>
-            </div>
-
-            <!-- MENU bên phải  -->
-            <div id="right">
+            <td class="sidebar">
                 <div class="title">Hãng sản xuất</div>
                 <ul class="categories">
-
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHONMUA 365</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Deli</a>
-                    </li>
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiên Long</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;KLONG</a>
-                    </li>
-                    <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Lazy Box</a>
-                    </li>
-                    <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M&G</a>
-                    </li>
+                    <li class="lmenu1"><a href="#">CHONMUA 365</a></li>
+                    <li class="lmenu2"><a href="#">Deli</a></li>
+                    <li class="lmenu1"><a href="#">Thiên Long</a></li>
+                    <li class="lmenu2"><a href="#">KLONG</a></li>
                 </ul>
-                <div class="box">
-                    <div class="title">Quảng cáo</div>
-                    <div class="box_content" style="height:190px; text-align: center;">
-                        Chèn hình quảng cáo!
-                    </div>
+                <br />
+                <div class="title">Quảng cáo</div>
+                <div style="padding:10px; text-align:center;">
+                    <img src="images/quangcao.jpg" alt="QC" width="160" />
                 </div>
-            </div>
-            <div style="clear:both; height:10px;"></div>
-            <div id="footer">
-                footer
-            </div>
+            </td>
+        </tr>
 
-    </div>
+        <tr>
+            <td colspan="3" class="footer">
+                &copy; 2026 BookStore - Website thực hành HTML Table
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>

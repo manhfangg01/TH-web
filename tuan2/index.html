@@ -4,34 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .styled-table{
+            border-collapse: collapse;
+            
+           
+        }
+        .styled-table thead tr{
+            background-color: rgb(33, 207, 140);
+        }
+        
+        .styled-table thead tr th{
+            color: white;
+            text-align: center;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #889b8b;
+        }
+        .styled-table th,
+        .styled-table td {
+             padding: 12px 15px;
+        }
+        
+
+        .styled-table tr:last-child td:first-child {
+            border: 2px solid inherit;
+            border-bottom-left-radius: 10px;
+        }
+
+        .styled-table tr:last-child td:last-child {
+            border: 2px solid inherit;
+            border-bottom-right-radius: 10px;
+        }
+        .styled-table tr:first-child th:first-child {
+            border: 2px solid inherit;
+            border-top-left-radius: 10px;
+        }
+        .styled-table tr:first-child th:last-child {
+            border: 2px solid inherit;
+            border-top-right-radius: 10px;
+        }
+        .styled-table .active-row{
+            color: #dde0e6;
+        }
+
+        .card{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>Deleniti pariatur minima rerum cupiditate. Ullam.</td>
-            <td>Voluptate nostrum expedita accusamus doloremque ad?</td>
-        </tr>
-        <tr>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>Ullam nemo nesciunt aut nam aspernatur.</td>
-            <td>Ut facere architecto aut maiores similique?</td>
-        </tr>
-        <tr>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>Placeat aliquam repellat accusantium optio nemo.</td>
-            <td>Ex est natus minima. Harum, ducimus.</td>
-        </tr>
-        <tr>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>Totam eaque provident molestiae consequuntur sunt.</td>
-            <td>Fugit repudiandae molestias animi pariatur quos.</td>
-        </tr>
-        <tr>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>Voluptatum deleniti voluptatibus ea nam nobis.</td>
-            <td>Beatae reprehenderit ipsam facilis distinctio! Magni?</td>
-        </tr>
+
+    <table class="styled-table" align="center" >
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,810</td>
+                <td>dcode</td>
+            </tr>
+            <tr class="active-row">
+                <td>2</td>
+                <td>Sally</td>
+                <td>72,400</td>
+                <td>Student</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>52,300</td>
+                <td>dcode</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Manh</td>
+                <td>52,300,0000</td>
+                <td>Heroine</td>
+            </tr>
+        </tbody>
     </table>
+
+    <hr/>
+    
+    <div class="card">
+        <div class="card-header">List of obito uchiha</div>
+
+        <ul class="">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li>Bai 1 <a href="./lab02_bai1.html"></a></li>
+            <li>Bai 2 <a href="./lab02_bai2.html"></a></li>
+            <li>Bai 3 <a href="./Lab02/Vi_du_Lab01/index.html"></a></li>
+        </ul>
+    </div>
+    
+
 </body>
 </html>
