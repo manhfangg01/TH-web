@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Thêm sản phẩm mới</title>
+    <style type="text/css">
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        background-color: #f4f4f4;
+      }
+      #container {
+        width: 500px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+      .title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 5px;
+        vertical-align: middle;
+      }
+      input[type="text"],
+      input[type="number"],
+      select,
+      textarea {
+        border: 1px solid #ccc;
+        padding: 4px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .short-input {
+        width: 100px !important;
+        display: inline-block;
+      }
+      .btn-container {
+        text-align: center;
+        margin-top: 15px;
+      }
+      .checkbox-group {
+        display: inline-block;
+        width: 45%;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <form name="frmThemSanPham" action="#" method="post" enctype="multipart/form-data">
+        <div class="title">THÊM SẢN PHẨM MỚI</div>
+        <table border="0">
+          <tr>
+            <td width="30%">Mã sản phẩm</td>
+            <td><input type="text" name="txtMaSP" value="49181802" /></td>
+          </tr>
+          <tr>
+            <td>Tên sản phẩm</td>
+            <td><input type="text" name="txtTenSP" value="Oxford Advanced Learn" /></td>
+          </tr>
+          <tr>
+            <td>Hình ảnh</td>
+            <td><input type="file" name="fileHinhAnh" /></td>
+          </tr>
+          <tr>
+            <td>Hãng sản xuất</td>
+            <td>
+              <select name="selHangSX">
+                <option value="ThienLong">Thiên Long</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Kích thước</td>
+            <td>W: <input type="text" class="short-input" name="txtWidth" value="200" /> H: <input type="text" class="short-input" name="txtHeight" value="300" /> mm</td>
+          </tr>
+          <tr>
+            <td>Số trang</td>
+            <td><input type="text" class="short-input" name="txtSoTrang" value="1200" /> trang</td>
+          </tr>
+          <tr>
+            <td>Tác giả</td>
+            <td><input type="text" name="txtTacGia" value="English Corpus" /></td>
+          </tr>
+          <tr>
+            <td>Giá</td>
+            <td>
+              <input type="text" class="short-input" name="txtGia" value="517.000" />
+              &nbsp;&nbsp; Màu: <input type="color" name="clrMau" value="#000000" style="width: 50px; height: 25px; vertical-align: middle" />
+            </td>
+          </tr>
+          <tr>
+            <td>Xuất xứ</td>
+            <td><input type="text" name="txtXuatXu" value="Không có" /></td>
+          </tr>
+          <tr>
+            <td valign="top">Thể Loại</td>
+            <td>
+              <div class="checkbox-group"><input type="checkbox" /> Văn học</div>
+              <div class="checkbox-group"><input type="checkbox" /> Thiếu nhi</div>
+              <br />
+              <div class="checkbox-group"><input type="checkbox" /> Kinh tế</div>
+              <div class="checkbox-group"><input type="checkbox" /> Giáo khoa</div>
+              <br />
+              <div class="checkbox-group"><input type="checkbox" /> Tâm lý</div>
+              <div class="checkbox-group"><input type="checkbox" checked /> Ngoại ngữ</div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Mô tả chi tiết</td>
+            <td>
+              <textarea name="txtMoTa" rows="8">Paperback - 10th Edition (With 1 Year's Access To Both Premium Online And App)</textarea>
+            </td>
+          </tr>
+        </table>
+
+        <div class="btn-container">
+          <input type="submit" value="Thêm" />
+          <input type="reset" value="Xóa" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
