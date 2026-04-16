@@ -1,111 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .styled-table{
-            border-collapse: collapse;
-            
-           
-        }
-        .styled-table thead tr{
-            background-color: rgb(33, 207, 140);
-        }
-        
-        .styled-table thead tr th{
-            color: white;
-            text-align: center;
-        }
+      .styled-table {
+        border-collapse: collapse;
+      }
+      .styled-table thead tr {
+        background-color: rgb(33, 207, 140);
+      }
 
-        .styled-table tbody tr:nth-of-type(even) {
-            background-color: #889b8b;
-        }
-        .styled-table th,
-        .styled-table td {
-             padding: 12px 15px;
-        }
-        
+      .styled-table thead tr th {
+        color: white;
+        text-align: center;
+      }
 
-        .styled-table tr:last-child td:first-child {
-            border: 2px solid inherit;
-            border-bottom-left-radius: 10px;
-        }
+      .styled-table tbody tr:nth-of-type(even) {
+        background-color: #889b8b;
+      }
+      .styled-table th,
+      .styled-table td {
+        padding: 12px 15px;
+      }
 
-        .styled-table tr:last-child td:last-child {
-            border: 2px solid inherit;
-            border-bottom-right-radius: 10px;
-        }
-        .styled-table tr:first-child th:first-child {
-            border: 2px solid inherit;
-            border-top-left-radius: 10px;
-        }
-        .styled-table tr:first-child th:last-child {
-            border: 2px solid inherit;
-            border-top-right-radius: 10px;
-        }
-        .styled-table .active-row{
-            color: #dde0e6;
-        }
+      .styled-table tr:last-child td:first-child {
+        border: 2px solid inherit;
+        border-bottom-left-radius: 10px;
+      }
 
-        .card{
-            display: flex;
-            justify-content: center;
-        }
+      .styled-table tr:last-child td:last-child {
+        border: 2px solid inherit;
+        border-bottom-right-radius: 10px;
+      }
+      .styled-table tr:first-child th:first-child {
+        border: 2px solid inherit;
+        border-top-left-radius: 10px;
+      }
+      .styled-table tr:first-child th:last-child {
+        border: 2px solid inherit;
+        border-top-right-radius: 10px;
+      }
+      .styled-table .active-row {
+        color: #dde0e6;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <table class="styled-table" align="center">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Points</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Domenic</td>
+          <td>88,810</td>
+          <td>dcode</td>
+        </tr>
+        <tr class="active-row">
+          <td>2</td>
+          <td>Sally</td>
+          <td>72,400</td>
+          <td>Student</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Nick</td>
+          <td>52,300</td>
+          <td>dcode</td>
+        </tr>
 
-    <table class="styled-table" align="center" >
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Points</th>
-                <th>Team</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Domenic</td>
-                <td>88,810</td>
-                <td>dcode</td>
-            </tr>
-            <tr class="active-row">
-                <td>2</td>
-                <td>Sally</td>
-                <td>72,400</td>
-                <td>Student</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Nick</td>
-                <td>52,300</td>
-                <td>dcode</td>
-            </tr>
-            
-            <tr>
-                <td>4</td>
-                <td>Manh</td>
-                <td>52,300,0000</td>
-                <td>Heroine</td>
-            </tr>
-        </tbody>
+        <tr>
+          <td>4</td>
+          <td>Manh</td>
+          <td>52,300,0000</td>
+          <td>Heroine</td>
+        </tr>
+      </tbody>
     </table>
 
-    <hr/>
-    
+    <hr />
 
     <div>
-        <ul>
-            <li> <a href="./lab02_bai1.html" target="_blank">Bai1 </a></li>
-            <li> <a href="./lab02_bai2.html" target="_blank">Bai2</a></li>
-            <li> <a href="./Lab02/Vi_du_Lab01/index.html" target="_blank">Bai3</a></li>
-        </ul>
+      <ul>
+        <li><a href="./lab02_bai1.html" target="_blank">Bai1 </a></li>
+        <li><a href="./lab02_bai2.html" target="_blank">Bai2</a></li>
+        <li><a href="./Lab02/Vi_du_Lab01/index.html" target="_blank">Bai3</a></li>
+      </ul>
     </div>
-    
-
-</body>
+  </body>
 </html>
