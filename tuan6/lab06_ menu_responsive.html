@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Menu Responsive</title>
+    <style>
+      /* Reset & Base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      li {
+        list-style: none;
+        cursor: pointer;
+      }
+
+      .menu ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: #333;
+        color: white;
+      }
+
+      .menu li {
+        padding: 15px 25px;
+        transition: 0.3s;
+      }
+
+      .menu li:hover {
+        background-color: #555;
+      }
+
+      /* Ẩn icon bars trên PC */
+      .home i {
+        display: none;
+      }
+
+      /* Responsive cho Mobile */
+      @media screen and (max-width: 600px) {
+        .menu ul {
+          flex-direction: column; /* Xếp chồng theo cột */
+        }
+
+        /* Li đầu tiên (chứa chữ Home và Icon) */
+        .home {
+          display: flex;
+          justify-content: space-between; /* Đẩy chữ sang trái, icon sang phải */
+          align-items: center;
+          width: 100%;
+          background-color: #222; /* Màu tối hơn cho mục chính */
+        }
+
+        .home i {
+          display: block; /* Hiện icon trên mobile */
+          font-size: 1.2rem;
+          padding: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li class="home"><span>Home</span><i class="fa-solid fa-bars"></i></li>
+          <li>News</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
